@@ -56,5 +56,6 @@ public class CollectionTestSuite {
         //Then
         Assertions.assertNotEquals(newList,evenNumbers);
         Assertions.assertNotSame(newList,evenNumbers);
+        Assertions.assertEquals(evenNumbers, Arrays.asList(2, 4, 6, 8));
     }
 }
