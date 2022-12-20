@@ -8,7 +8,7 @@ public final class Continent {
     private final String continent;
     private final List<Country> countryCollection = new ArrayList<>();
 
-    public Continent(String continent) {
+    public Continent(final String continent) {
         this.continent = continent;
     }
 
