@@ -2,9 +2,16 @@ package com.kodilla.stream.portfolio;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 
 
@@ -87,12 +94,14 @@ public class BoardTestSuite {
         var project = prepareTestData();
 
         //When
-        var inProgressTasks = new ArrayList<>();
+        List<TaskList> inProgressTasks = new ArrayList<>();
         inProgressTasks.add(new TaskList("In progress"));
-        var averageTimeTasks = IntStream.range(0, project.getTaskLists().size())
-                .filter(inProgressTasks::contains)
-                .sum();
-        System.out.println(averageTimeTasks);
+//        long averageTimeTasks = project.getTaskLists().stream()
+//                .filter(inProgressTasks::contains)
+//                .flatMap(t -> t.getTasks().stream())
+//
+//
+//        System.out.println(averageTimeTasks);
 
         //Then
     }
