@@ -1,23 +1,19 @@
 package com.kodilla.stream.portfolio;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.time.Duration;
-import java.time.Instant;
 import java.time.LocalDate;
-import java.time.Period;
 import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.DoubleStream;
-import java.util.stream.IntStream;
 
+import java.util.ArrayList;
+import java.util.List;
 
 import static java.util.stream.Collectors.toList;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@DisplayName(("Board Test Suite"))
 public class BoardTestSuite {
 
     @Test
@@ -96,14 +92,15 @@ public class BoardTestSuite {
         //When
         List<TaskList> inProgressTasks = new ArrayList<>();
         inProgressTasks.add(new TaskList("In progress"));
-//        long averageTimeTasks = project.getTaskLists().stream()
-//                .filter(inProgressTasks::contains)
-//                .flatMap(t -> t.getTasks().stream())
-//
-//
-//        System.out.println(averageTimeTasks);
+        var averageTimeTasks = project.getTaskLists().stream()
+                .filter(inProgressTasks::contains)
+                .flatMap(t -> t.getTasks().stream())
+                .mapToDouble(t -> ChronoUnit.DAYS.between(t.getCreated(), LocalDate.now()))
+                .average()
+               .getAsDouble();
 
         //Then
+        assertEquals(10, averageTimeTasks);
     }
 
 
