@@ -97,7 +97,7 @@ public class BoardTestSuite {
                 .flatMap(t -> t.getTasks().stream())
                 .mapToDouble(t -> ChronoUnit.DAYS.between(t.getCreated(), LocalDate.now()))
                 .average()
-               .getAsDouble();
+                .getAsDouble();
 
         //Then
         assertEquals(10, averageTimeTasks);
