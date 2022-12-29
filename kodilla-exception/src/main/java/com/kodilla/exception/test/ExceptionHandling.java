@@ -10,7 +10,7 @@ public class ExceptionHandling {
         } catch (Exception e) {
             System.out.println("Try again");
         } finally {
-            System.out.println("Good work");
+            System.out.println("Hard work");
         }
     }
 
