@@ -7,21 +7,14 @@ public class FlightFinder {
 
     public void findFlight(Flight flight) throws RouteNotFoundException {
         Map<String, Boolean> fly = new HashMap<>();
-        fly.put("London", true);
-        fly.put("Amsterdam", false);
+       fly.put("Amsterdam", true);
+        fly.put("Paris", true);
 
         for(Map.Entry<String, Boolean> entry : fly.entrySet()) {
-            if(entry.getValue() == true) {
+            if(entry.getKey().equals(flight.getArrivalAirport())) {
                 System.out.println(flight);
             }
                 throw new RouteNotFoundException();
         }
-
-
-//        if() {
-//            System.out.println(flight);
-//        } else {
-//            throw new RouteNotFoundException();
-//       }
     }
 }
