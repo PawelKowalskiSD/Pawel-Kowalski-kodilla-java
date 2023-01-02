@@ -39,8 +39,8 @@ public class Flight {
 
     @Override
     public int hashCode() {
-        int result = departureAirport.hashCode();
-        result = 31 * result + arrivalAirport.hashCode();
+        int result = departureAirport != null ? departureAirport.hashCode() : 0;
+        result = 31 * result + (arrivalAirport != null ? arrivalAirport.hashCode() : 0);
         return result;
     }
 }
