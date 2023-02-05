@@ -11,11 +11,5 @@ public class App {
 
         OrderProcessor orderProcessor = new OrderProcessor(new MessageService(), new ProductOrderService(), new OrderProductRepository());
         orderProcessor.process(orderRequest);
-
-//                MovieStore movieStore = new MovieStore();
-//                movieStore.getMovies().entrySet().stream()
-//                        .flatMap(a -> a.getValue().stream())
-//                        .map(a -> a.concat("!"))
-//                        .forEach(System.out::print);
     }
 }

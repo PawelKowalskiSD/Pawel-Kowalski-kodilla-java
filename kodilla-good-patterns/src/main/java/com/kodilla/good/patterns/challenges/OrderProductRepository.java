@@ -7,7 +7,7 @@ public class OrderProductRepository  implements OrderRepository {
 
     @Override
     public boolean createOrder(User user, LocalDateTime dateOfOrder, Set<Product> product) {
-        System.out.println("======================Create Order===========================");
+        System.out.println("======================Create Order=========================");
         System.out.println("Create new order: " + user.getName() + " " + user.getSurname() + "\n"
                 + "Date order: " + dateOfOrder.toString() + "\n"
                 + "Shipping address: " + user.getShippingAddress() + "\n"

@@ -5,7 +5,6 @@ public class User {
     private final String name;
     private final String surname;
     private final String shippingAddress;
-
     private final String emailAddress;
     private final String phoneNumber;
 
@@ -16,10 +15,6 @@ public class User {
         this.emailAddress = emailAddress;
         this.phoneNumber = phoneNumber;
     }
-
-
-
-
     public String getName() {
         return name;
     }

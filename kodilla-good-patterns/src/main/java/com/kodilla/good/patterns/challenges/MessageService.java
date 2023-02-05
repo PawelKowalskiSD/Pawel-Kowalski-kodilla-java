@@ -6,7 +6,6 @@ public class MessageService implements InformationService {
     public void inform(User user) {
         if(userHAsEnteredAnEmail(user));
         if (userHasProvidedATelephoneNumber(user));
-
     }
 
     private boolean userHasProvidedATelephoneNumber(User user) {
@@ -17,10 +16,9 @@ public class MessageService implements InformationService {
                     + "Your order is in progress.\n"
                     + "you will get shipping  information on your phone.\n"
                     + "if you hava questions call the number: (00)468-223-115\n"
-                    + "Have a nice day Jonas.");
+                    + "Have a nice day Jonas.\n");
             return true;
         }
-
         return false;
     }
 
@@ -32,10 +30,9 @@ public class MessageService implements InformationService {
                     + "Your order is in progress.\n"
                     + "you will get shipping  information on your email.\n"
                     + "if you hava questions send the email: marketOnline@wl.com\n"
-                    + "Have a nice day Jonas.");
+                    + "Have a nice day Jonas.\n");
             return true;
         }
-
         return false;
     }
 }

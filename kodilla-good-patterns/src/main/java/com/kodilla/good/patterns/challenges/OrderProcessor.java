@@ -13,7 +13,7 @@ public class OrderProcessor {
     }
 
     public OrderDto process (final OrderRequest orderRequest) {
-        boolean isOrder = orderService.order(orderRequest.getUser(), orderRequest.getDateOfOrder(), orderRequest.getProduct());  // dopisać wszystko co wiąże się z zamówieniem
+        boolean isOrder = orderService.order(orderRequest.getUser(), orderRequest.getDateOfOrder(), orderRequest.getProduct());
 
         if(isOrder) {
             informationService.inform(orderRequest.getUser());

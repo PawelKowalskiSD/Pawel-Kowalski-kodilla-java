@@ -18,12 +18,11 @@ public class Product {
     }
 
     private double calculateOnePosition() {
-       double totalPrice = 0;
+        double totalPrice = 0;
         for (int i = 0; i < getQuantity(); i++)
             totalPrice += getPrice();
         return totalPrice;
     }
-
 
     public String getProductName() {
         return productName;
@@ -39,12 +38,10 @@ public class Product {
 
     @Override
     public String toString() {
-        return  getProductName()
-                + " -->> Quantity: " + getQuantity() + "pcs"
-                + " -->> Price per item: " + getPrice() + " zł -->> "
-                + "Total: = " + calculateProduct() + " zł" + "\n";
-
-
+        return getProductName() + " -->> Quantity: "
+                + getQuantity() + "pcs" + " -->> Price per item: "
+                + getPrice() + " zł -->> " + "Total: = "
+                + calculateProduct() + " zł" + "\n";
     }
 
     @Override
