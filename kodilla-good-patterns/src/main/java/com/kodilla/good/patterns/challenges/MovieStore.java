@@ -1,11 +1,16 @@
 package com.kodilla.good.patterns.challenges;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class MovieStore {
+
+    public static void main(String[] args) {
+        MovieStore movieStore = new MovieStore();
+        movieStore.getMovies().values().stream()
+                .flatMap(Collection::stream)
+                .map(a -> a.concat("!"))
+                .forEach(System.out::print);
+    }
 
     public Map<String, List<String>> getMovies() {
         List<String> ironManTranslations = new ArrayList<>();
