@@ -9,14 +9,11 @@ public class LibraryTestSuite {
 
     @Autowired
     private Library library;
-
     @Test
     void testLoadFromDb() {
         //Given
-
         //When
         library.loadFromDb();
-
         //Then
         //do nothing
     }
@@ -24,7 +21,6 @@ public class LibraryTestSuite {
     @Test
     void testSaveToDb() {
         //Given
-
         //When
         library.saveToDb();
 
