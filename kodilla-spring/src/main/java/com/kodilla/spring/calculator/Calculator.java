@@ -27,9 +27,16 @@ public class Calculator {
         return mul;
     }
 
-    public double div(double a, double b) {
+    public double div(double a, double b) throws ArithmeticException {
+
+        try {
+            if (b == 0) throw new ArithmeticException();
+        } catch (ArithmeticException e) {
+            System.out.println("Don't divide by zero: ");
+        }
         double div = a / b;
         display.displayValue(div);
         return div;
     }
+
 }
