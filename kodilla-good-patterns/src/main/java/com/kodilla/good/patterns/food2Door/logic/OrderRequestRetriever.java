@@ -13,9 +13,9 @@ public class OrderRequestRetriever {
         Set<Product> extraFoodShopProductList = new HashSet<>();
                     extraFoodShopProductList.add(new Product("tea", 2));
         LocalDateTime dateOfOrder = LocalDateTime.of(2023, 1, 12, 13, 44, 22);
-        Producer producer = new Producer("ExtraFoodShop", extraFoodShopProductList);
+        Producer extraFoodShop = new Producer("ExtraFoodShop", extraFoodShopProductList);
 
 
-        return new OrderRequest(producer, dateOfOrder);
+        return new OrderRequest(extraFoodShop, dateOfOrder);
     }
 }

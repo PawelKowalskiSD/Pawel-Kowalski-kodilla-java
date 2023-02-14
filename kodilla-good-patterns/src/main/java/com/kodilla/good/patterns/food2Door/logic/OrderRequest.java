@@ -8,7 +8,7 @@ public class OrderRequest {
     private final Producer producer;
     private final LocalDateTime DateOfOrder;
 
-    public OrderRequest(Producer producer, LocalDateTime dateOfOrder) {
+    public OrderRequest(final Producer producer, final LocalDateTime dateOfOrder) {
         this.producer = producer;
         DateOfOrder = dateOfOrder;
     }
