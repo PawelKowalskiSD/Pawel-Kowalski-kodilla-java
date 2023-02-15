@@ -16,9 +16,9 @@ public class FlightRequest {
     }
 
     public Flight departureSearch() {
+       return null;
 
 
-        return null;
     }
 
     public Flight arrivalSearch() {
