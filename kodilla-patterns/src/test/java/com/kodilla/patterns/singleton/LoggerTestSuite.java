@@ -1,18 +1,18 @@
 package com.kodilla.patterns.singleton;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+@DisplayName("Logger test suite")
 public class LoggerTestSuite {
 
     private static Logger logger;
 
+    private static int count = 0;
+
     @BeforeAll
     public static void startProgram() {
-        logger = new Logger();
+        logger = Logger.LOG;
         logger.log("Starting program.....");
         logger.log("Please wait........");
         logger.log("It will take a few minutes");
@@ -26,7 +26,19 @@ public class LoggerTestSuite {
         logger.log("Program closed");
     }
 
+    @BeforeEach
+    public void counter() {
+        count++;
+        System.out.println("\n=========================");
+        System.out.println("Test nr " + count);
+    }
+    @AfterEach
+    public void end() {
+        System.out.println("=========================\n");
+    }
+
     @Test
+    @DisplayName("Test get last log")
     void testGetLastLog() {
         //Given
 
