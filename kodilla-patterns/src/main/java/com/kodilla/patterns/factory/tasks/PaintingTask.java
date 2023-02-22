@@ -14,7 +14,7 @@ public final class PaintingTask implements Task {
 
     @Override
     public String executeTask() {
-        return whatToPaint + color;
+        return whatToPaint + " " + color;
     }
 
     @Override
@@ -24,6 +24,15 @@ public final class PaintingTask implements Task {
 
     @Override
     public boolean isTaskExecuted() {
-        return true;
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return "PaintingTask{" +
+                "taskName='" + taskName + '\'' +
+                ", color='" + color + '\'' +
+                ", whatToPaint='" + whatToPaint + '\'' +
+                '}';
     }
 }

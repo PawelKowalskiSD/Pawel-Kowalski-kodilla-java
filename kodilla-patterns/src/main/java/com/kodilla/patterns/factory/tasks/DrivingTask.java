@@ -14,7 +14,7 @@ public final class DrivingTask implements Task {
 
     @Override
     public String executeTask() {
-        return where + using;
+        return where + " " + using;
     }
 
     @Override
@@ -25,5 +25,14 @@ public final class DrivingTask implements Task {
     @Override
     public boolean isTaskExecuted() {
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "DrivingTask{" +
+                "taskName='" + taskName + '\'' +
+                ", where='" + where + '\'' +
+                ", using='" + using + '\'' +
+                '}';
     }
 }

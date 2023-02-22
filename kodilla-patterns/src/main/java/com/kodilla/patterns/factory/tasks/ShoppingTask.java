@@ -14,7 +14,7 @@ public final class ShoppingTask implements Task {
 
     @Override
     public String executeTask() {
-        return whatToBuy + quantity;
+        return whatToBuy + " " + quantity;
     }
 
     @Override
@@ -25,5 +25,14 @@ public final class ShoppingTask implements Task {
     @Override
     public boolean isTaskExecuted() {
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "ShoppingTask{" +
+                "taskName='" + taskName + '\'' +
+                ", whatToBuy='" + whatToBuy + '\'' +
+                ", quantity=" + quantity +
+                '}';
     }
 }
