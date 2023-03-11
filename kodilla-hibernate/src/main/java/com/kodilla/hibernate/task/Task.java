@@ -1,17 +1,20 @@
 package com.kodilla.hibernate.task;
 
+import com.kodilla.hibernate.tasklist.TaskList;
 import jakarta.persistence.*;
 import org.springframework.lang.NonNull;
 
 import java.util.Date;
 @Entity
 @Table(name = "TASKS")
-public class Task {
+public final class Task {
 
     private int id;
     private String description;
     private Date created;
     private int duration;
+    private TaskFinancialDetails taskFinancialDetails;
+    private TaskList taskList;
 
     public Task() {
     }
@@ -60,5 +63,24 @@ public class Task {
 
     private void setDuration(int duration) {
         this.duration = duration;
+    }
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "TASKS_FINANCIALS_ID")
+    public TaskFinancialDetails getTaskFinancialDetails() {
+        return taskFinancialDetails;
+    }
+
+    public void setTaskFinancialDetails(TaskFinancialDetails taskFinancialDetails) {
+        this.taskFinancialDetails = taskFinancialDetails;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "TASKLISTS_ID")
+    public TaskList getTaskList() {
+        return taskList;
+    }
+
+    public void setTaskList(TaskList taskLists) {
+        this.taskList = taskLists;
     }
 }
