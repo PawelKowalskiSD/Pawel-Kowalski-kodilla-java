@@ -5,7 +5,10 @@ import org.springframework.lang.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@NamedQuery(
+        name = "Employee.retrieveLastname",
+        query = "FROM Employee WHERE lastname = :LASTNAME"
+)
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {
@@ -44,7 +47,7 @@ public class Employee {
         this.firstname = firstname;
     }
     @NonNull
-    @Column(name =  "LASTNAME")
+    @Column(name = "LASTNAME")
     public String getLastname() {
         return lastname;
     }

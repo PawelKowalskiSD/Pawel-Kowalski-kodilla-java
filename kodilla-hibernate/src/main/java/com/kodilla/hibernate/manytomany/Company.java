@@ -5,9 +5,14 @@ import org.springframework.lang.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@NamedNativeQuery(
+        name = "Company.retrieveThreeCharacter",
+        query = "SELECT * FROM COMPANIES" +
+        " WHERE COMPANY_NAME LIKE CONCAT('%', :COMPANY_NAME, '%')",
+        resultClass = Company.class
+)
 @Entity
-@Table(name = " COMPANIES")
+@Table(name = "COMPANIES")
 public class Company {
 
     private int id;
@@ -48,5 +53,12 @@ public class Company {
 
     public void setEmployees(List<Employee> employees) {
         this.employees = employees;
+    }
+
+    @Override
+    public String toString() {
+        return "Company{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }
