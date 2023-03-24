@@ -15,7 +15,6 @@ public class RpsRunner {
             if(select.isRestart()) {
                 UserDialogs.introduction(board);
             } else if (UserDialogs.select()) {
-                System.out.println("sdasda");
 
                 if(board.isGameWithComputer()) {
                 }
