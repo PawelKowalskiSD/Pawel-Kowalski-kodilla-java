@@ -21,6 +21,7 @@ public class Display {
         System.out.println("=  Press (N - New game)  =");
         System.out.println("==========================");
     }
+
     public static void displayResultsAfterRound(Statistic statistic, GameSymbols userSymbol, GameSymbols computerSymbol, Winner winner) {
         System.out.println("=====================================");
         System.out.println("Round: " + statistic.getRound() + " of " + statistic.getNumberOfGames());
@@ -42,7 +43,6 @@ public class Display {
             System.out.println("Game winner is: " + ComputerPlayer.BOT_ROMAN);
         else if (score.getPlayerScore() == score.getComputerScore())
             System.out.println("It's a draw:)");
-
     }
 
     public static void displayName(Player userName) {

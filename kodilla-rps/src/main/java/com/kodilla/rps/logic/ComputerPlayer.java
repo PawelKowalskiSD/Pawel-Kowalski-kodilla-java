@@ -24,7 +24,6 @@ public class ComputerPlayer {
         else {
             return getGameSymbols(computerGameSymbols, GameSymbols.SPOKE, GameSymbols.PAPER, GameSymbols.SCISSOR, GameSymbols.ROCK, GameSymbols.LIZARD);
         }
-
     }
 
     private static GameSymbols getGameSymbols(int computerGameSymbols, GameSymbols rock, GameSymbols scissor, GameSymbols lizard, GameSymbols paper, GameSymbols spoke) {

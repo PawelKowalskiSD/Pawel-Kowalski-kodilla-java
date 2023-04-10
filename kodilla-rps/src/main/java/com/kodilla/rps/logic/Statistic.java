@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Statistic {
 
-    private int round;
-    private int numberOfGames;
+    private final int round;
+    private final int numberOfGames;
 
     Player player;
     Score score;
