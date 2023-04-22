@@ -8,9 +8,6 @@ public class App {
         SudokuGame sudokuGame = new SudokuGame();
         System.out.println(sudokuGame);
         while (!gameFinished) {
-            UserDialogs.getUserName();
-//            UserDialogs.getLevel();
-//            sudokuGame.getBoard();
             Move move = UserDialogs.userChoice();
             if(sudokuGame.resolveSudoku()) {
 
@@ -18,4 +15,6 @@ public class App {
                 gameFinished = true;
         }
    }
+
+
 }

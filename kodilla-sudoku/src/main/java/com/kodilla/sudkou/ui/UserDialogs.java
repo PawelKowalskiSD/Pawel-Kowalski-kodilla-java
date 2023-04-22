@@ -5,42 +5,13 @@ import com.kodilla.sudkou.Move;
 import java.util.Scanner;
 
 public class UserDialogs {
-    public static void getUserName() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Write your username:");
-        while (true) {
-            try {
-                String name = scanner.nextLine();
-                if (name.trim().length() > 2)
-                    System.out.println("Hello " + name);
-                return;
-            } catch (Exception e) {
-                System.out.println("Your name is to short try again");
-            }
-        }
-    }
-
-    public static void getLevel() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Choice: e-easy|h-hard");
-        while (true) {
-            String s = scanner.nextLine();
-            try {
-                if (s.equalsIgnoreCase("e")) {
-
-                } else if (s.equalsIgnoreCase("h")) {
-
-                } else
-                    System.out.println("Wrong choice try again");
-            } catch (Exception e) {
-                System.out.println("Wrong choice try again");
-            }
-        }
-    }
 
     public static Move userChoice() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your move");
+        System.out.println("How use program: " +
+                "Set: (col, row, value)");
+        System.out.println("If you wont resolve sudoku set: SUDOKU");
+        System.out.println("Set value: ");
         while (true) {
             String s = scanner.nextLine();
             try {
