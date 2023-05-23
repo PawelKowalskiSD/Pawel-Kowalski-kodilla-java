@@ -68,4 +68,13 @@ public class Employee {
     public void setCompanies(List<Company> companies) {
         this.companies = companies;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                '}';
+    }
 }
+
