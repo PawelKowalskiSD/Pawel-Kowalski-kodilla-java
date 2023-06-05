@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StoredPROcTestSuite {
+public class StoredProcTestSuite {
 
     @Test
     public void testUpdateVipLevels() throws SQLException {
